@@ -17,6 +17,12 @@ import * as ReactRouterDom from 'react-router-dom';
 import { toRelativeUrl, AuthSdkError } from '@okta/okta-auth-js';
 import OktaError from './OktaError';
 
+/***
+ * Workaround to support react-router v6
+ * Issue: https://github.com/okta/okta-react/issues/178
+ * Open PR: https://github.com/okta/okta-react/pull/26
+ * Fix by flying-sheep: https://github.com/okta/okta-react/compare/master...flying-sheep:flying-sheep/okta-react-router-6
+ * **/
 // react-router v6 exports useMatch, react-router v5 exports useRouteMatch
 const useMatch = Object.entries(ReactRouterDom).filter(([k, _v]) => k == 'useMatch' || k == 'useRouteMatch')[0][1];
 
