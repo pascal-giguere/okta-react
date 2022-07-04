@@ -36,6 +36,7 @@ const SecureRoute: React.FC<{
 }) => { 
   const { oktaAuth, authState, _onAuthRequired } = useOktaAuth();
   const { path, caseSensitive } = routeProps;
+  // @ts-ignore
   const match = path ? useMatch.call(null, { path, caseSensitive }) : null;
   const pendingLogin = React.useRef(false);
   const [handleLoginError, setHandleLoginError] = React.useState<Error | null>(null);
