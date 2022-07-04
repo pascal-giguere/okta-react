@@ -1,8 +1,7 @@
 {
-  "name": "@okta/okta-react",
-  "version": "6.6.0",
+  "name": "@pascalgiguere/okta-react",
+  "version": "6.6.1",
   "description": "React support for Okta",
-  "private": true,
   "scripts": {
     "banners": "node util/maintain-banners.js",
     "build": "node build.js",
